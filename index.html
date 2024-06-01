@@ -327,49 +327,30 @@ body {
 </div>
 
 
-<body>
-  <div class="gallery-container">
-      <div class="gallery-title">Tranças</div>
-      <div class="gallery slider" id="gallery-slider">
-          <!-- Slides serão adicionados pelo script -->
+<div class="gallery-container">
+  <div class="gallery-title">Tranças</div>
+  <div class="gallery slider">
+    <div class="slide">
+      <img src="https://i.imgur.com/t2CXoiw.png" alt="Slide 1">
+      <div class="gallery-overlay">
+        <button class="gallery-overlay-button">Ver mais</button>
       </div>
-  </div>
-  <script src="script.js"></script>
-</body>
+    </div>
+    <div class="slide">
+      <img src="https://i.imgur.com/t2CXoiw.png" alt="Slide 2">
+      <div class="gallery-overlay">
+        <button class="gallery-overlay-button">Ver mais</button>
+      </div>
+    </div>
+    <div class="slide">
+      <img src="https://i.imgur.com/t2CXoiw.png" alt="Slide 3">
+      <div class="gallery-overlay">
+        <button class="gallery-overlay-button">Ver mais</button>
+      </div>
+    </div>
     
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function() {
-    const gallerySlider = document.getElementById("gallery-slider");
-    const images = [
-        'imagem/slide1.png',
-        'imagem/slide2.png',
-        'imagem/slide3.png'
-    ];
-
-    images.forEach((src, index) => {
-        const slide = document.createElement('div');
-        slide.className = 'slide';
-
-        const img = document.createElement('img');
-        img.src = src;
-        img.alt = `Slide ${index + 1}`;
-
-        const overlay = document.createElement('div');
-        overlay.className = 'gallery-overlay';
-
-        const button = document.createElement('button');
-        button.className = 'gallery-overlay-button';
-        button.textContent = 'Ver mais';
-
-        overlay.appendChild(button);
-        slide.appendChild(img);
-        slide.appendChild(overlay);
-        gallerySlider.appendChild(slide);
-    });
-});
-
-    </script>
+    
 
 
     <!-- Adicione mais slides conforme necessário -->
