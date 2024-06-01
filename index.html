@@ -327,27 +327,21 @@ body {
 </div>
 
 
-<div class="gallery-container">
-  <div class="gallery-title">Tranças</div>
-  <div class="gallery slider">
-    <div class="slide">
-      <img src="https://i.imgur.com/t2CXoiw.png" alt="Slide 1">
-      <div class="gallery-overlay">
-        <button class="gallery-overlay-button">Ver mais</button>
-      </div>
-    </div>
-    <div class="slide">
-      <img src="https://i.imgur.com/t2CXoiw.png" alt="Slide 2">
-      <div class="gallery-overlay">
-        <button class="gallery-overlay-button">Ver mais</button>
-      </div>
-    </div>
-    <div class="slide">
-      <img src="https://i.imgur.com/t2CXoiw.png" alt="Slide 3">
-      <div class="gallery-overlay">
-        <button class="gallery-overlay-button">Ver mais</button>
-      </div>
-    </div>
+<input type="file" id="imageInput" multiple accept="image/*" onchange="loadImages(event)">
+<div id="gallery"></div>
+
+<script>
+function loadImages(event) {
+    var output = document.getElementById('gallery');
+    output.innerHTML = '';
+    for (var i = 0; i < event.target.files.length; i++) {
+        var img = document.createElement('img');
+        img.src = URL.createObjectURL(event.target.files[i]);
+        output.appendChild(img);
+    }
+}
+</script>
+
     
     <!-- Adicione mais slides conforme necessário -->
   </div>
